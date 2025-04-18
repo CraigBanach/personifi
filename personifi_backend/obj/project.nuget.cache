@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "9I//hNEjriY=",
+  "success": true,
+  "projectFilePath": "C:\\dev\\personifi\\personifi_backend\\personifi_backend.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Craig\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.4\\microsoft.aspnetcore.openapi.9.0.4.nupkg.sha512",
+    "C:\\Users\\Craig\\.nuget\\packages\\microsoft.openapi\\1.6.17\\microsoft.openapi.1.6.17.nupkg.sha512"
+  ],
+  "logs": []
+}

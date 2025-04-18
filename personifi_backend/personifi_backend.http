@@ -1,0 +1,6 @@
+@personifi_backend_HostAddress = http://localhost:5256
+
+GET {{personifi_backend_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
