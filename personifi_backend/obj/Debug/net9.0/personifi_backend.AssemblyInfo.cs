@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("personifi_backend")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a6ff2a76d2294cc0a4945387a2c33d9c09cd3a50")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3cad3f4050201c43068c858151545d24f28e067e")]
 [assembly: System.Reflection.AssemblyProductAttribute("personifi_backend")]
 [assembly: System.Reflection.AssemblyTitleAttribute("personifi_backend")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
