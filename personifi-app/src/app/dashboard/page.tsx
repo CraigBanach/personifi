@@ -1,4 +1,6 @@
-import { OverviewCards } from "@/components/dashboard/OverviewCards";
+import { BudgetProgress } from "@/components/dashboard/budgetProgress";
+import { OverviewCards } from "@/components/dashboard/overviewCards";
+import { SpendingChart } from "@/components/dashboard/spendingChart";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -19,6 +21,10 @@ const Dashboard = () => {
       </section>
       <section className="flex flex-col gap-6">
         <OverviewCards />
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-7">
+          <SpendingChart />
+          <BudgetProgress />
+        </div>
       </section>
     </main>
   );
