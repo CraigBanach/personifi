@@ -33,13 +33,6 @@ export default function Home() {
         >
           <a href="/auth/login">Login</a>
         </Button>
-        <Button
-          asChild
-          size="lg"
-          className="bg-finance-red hover:bg-finance-red-dark"
-        >
-          <a href="/auth/logout">Logout</a>
-        </Button>
       </div>
     </main>
   );

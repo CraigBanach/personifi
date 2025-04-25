@@ -4,9 +4,8 @@ import { RecentTransactions } from "@/components/dashboard/recentTransactions";
 import { SavingsGoals } from "@/components/dashboard/savingsGoals";
 import { SpendingChart } from "@/components/dashboard/spendingChart";
 import { UpcomingBills } from "@/components/dashboard/upcomingBills";
-import { auth0 } from "@/lib/auth0";
+import { Button } from "@/components/ui/button";
 import type { Metadata } from "next";
-import { redirect } from "next/navigation";
 
 export const metadata: Metadata = {
   title: "Dashboard | Personifi",
@@ -14,12 +13,6 @@ export const metadata: Metadata = {
 };
 
 const Dashboard = async () => {
-  const session = await auth0.getSession();
-
-  if (!session) {
-    redirect("/");
-  }
-
   return (
     <main className="flex flex-col p-4 md:p-6">
       <section className="flex flex-col justify-between gap-1 py-4 px-2">
@@ -44,6 +37,13 @@ const Dashboard = async () => {
           </div>
         </div>
       </section>
+      <Button
+          asChild
+          size="lg"
+          className="bg-finance-red hover:bg-finance-red-dark"
+        >
+          <a href="/auth/logout">Logout</a>
+        </Button>
     </main>
   );
 };
