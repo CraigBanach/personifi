@@ -26,6 +26,20 @@ export default function Home() {
         >
           Learn More
         </Button>
+        <Button
+          asChild
+          size="lg"
+          className="bg-finance-navy hover:bg-finance-navy-dark"
+        >
+          <Link href="/auth/login">Login</Link>
+        </Button>
+        <Button
+          asChild
+          size="lg"
+          className="bg-finance-red hover:bg-finance-red-dark"
+        >
+          <Link href="/auth/logout">Logout</Link>
+        </Button>
       </div>
     </main>
   );
