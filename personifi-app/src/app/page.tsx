@@ -31,14 +31,14 @@ export default function Home() {
           size="lg"
           className="bg-finance-navy hover:bg-finance-navy-dark"
         >
-          <Link href="/auth/login">Login</Link>
+          <a href="/auth/login">Login</a>
         </Button>
         <Button
           asChild
           size="lg"
           className="bg-finance-red hover:bg-finance-red-dark"
         >
-          <Link href="/auth/logout">Logout</Link>
+          <a href="/auth/logout">Logout</a>
         </Button>
       </div>
     </main>
