@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button";
-import Link from "next/link";
 
 export default function Home() {
   return (
@@ -17,7 +16,7 @@ export default function Home() {
           size="lg"
           className="bg-finance-green hover:bg-finance-green-dark"
         >
-          <Link href="/dashboard">Go to Dashboard</Link>
+          <a href="/auth/login">Login</a>
         </Button>
         <Button
           variant="outline"
@@ -25,13 +24,6 @@ export default function Home() {
           className="border-finance-green text-finance-green hover:bg-finance-green-light hover:text-finance-green-dark"
         >
           Learn More
-        </Button>
-        <Button
-          asChild
-          size="lg"
-          className="bg-finance-navy hover:bg-finance-navy-dark"
-        >
-          <a href="/auth/login">Login</a>
         </Button>
       </div>
     </main>

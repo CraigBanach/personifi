@@ -4,7 +4,6 @@ import { RecentTransactions } from "@/components/dashboard/recentTransactions";
 import { SavingsGoals } from "@/components/dashboard/savingsGoals";
 import { SpendingChart } from "@/components/dashboard/spendingChart";
 import { UpcomingBills } from "@/components/dashboard/upcomingBills";
-import { Button } from "@/components/ui/button";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -37,13 +36,6 @@ const Dashboard = async () => {
           </div>
         </div>
       </section>
-      <Button
-          asChild
-          size="lg"
-          className="bg-finance-red hover:bg-finance-red-dark"
-        >
-          <a href="/auth/logout">Logout</a>
-        </Button>
     </main>
   );
 };
