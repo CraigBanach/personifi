@@ -12,6 +12,12 @@ export const metadata: Metadata = {
 };
 
 const Dashboard = async () => {
+  console.log("CBTest: ", process.env.PERSONIFI_BACKEND_URL);
+  const data = await fetch(
+    `${process.env.PERSONIFI_BACKEND_URL}/weatherforecast`
+  );
+  console.info(await data.json());
+
   return (
     <main className="flex flex-col p-4 md:p-6">
       <section className="flex flex-col justify-between gap-1 py-4 px-2">
