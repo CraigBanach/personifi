@@ -1,14 +1,5 @@
 @personifi_backend_HostAddress = https://localhost:7266
 
-GET {{personifi_backend_HostAddress}}/weatherforecast/
-Accept: application/json
+GET {{personifi_backend_HostAddress}}/dashboard/balance
 
-###
-
-GET {{personifi_backend_HostAddress}}/weatherforecast/private
-Authorization: Bearer {{BearerToken}}
-###
-
-GET {{personifi_backend_HostAddress}}/weatherforecast/private-scoped
-Authorization: Bearer {{BearerToken}}
 ###

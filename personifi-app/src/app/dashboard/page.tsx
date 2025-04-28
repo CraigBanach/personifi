@@ -4,7 +4,6 @@ import { RecentTransactions } from "@/components/dashboard/recentTransactions";
 import { SavingsGoals } from "@/components/dashboard/savingsGoals";
 import { SpendingChart } from "@/components/dashboard/spendingChart";
 import { UpcomingBills } from "@/components/dashboard/upcomingBills";
-// import { auth0 } from "@/lib/auth0";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -13,22 +12,6 @@ export const metadata: Metadata = {
 };
 
 const Dashboard = async () => {
-  // try {
-  //   const token = await auth0.getAccessToken();
-  //   console.log("CBToken: ", token);
-  //   const data = await fetch(
-  //     `${process.env.PERSONIFI_BACKEND_URL}/weatherforecast/private-scoped`,
-  //     {
-  //       headers: {
-  //         Authorization: `Bearer ${token.token}`,
-  //       },
-  //     }
-  //   );
-  //   console.info("CBData: ", await data.json());
-  // } catch (e) {
-  //   console.error(e);
-  // }
-
   return (
     <main className="flex flex-col p-4 md:p-6">
       <section className="flex flex-col justify-between gap-1 py-4 px-2">

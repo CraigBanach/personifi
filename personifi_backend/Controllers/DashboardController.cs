@@ -9,9 +9,9 @@ namespace personifi_backend.Controllers
     // tigthly couple the controller to the dashboard
     public class DashboardController : ControllerBase
     {
-        private readonly ILogger<WeatherForecastController> _logger;
+        private readonly ILogger<DashboardController> _logger;
 
-        public DashboardController(ILogger<WeatherForecastController> logger)
+        public DashboardController(ILogger<DashboardController> logger)
         {
             _logger = logger;
         }
