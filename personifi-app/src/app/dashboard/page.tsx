@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   description: "Manage your personal finances with ease",
 };
 
-const Dashboard = () => {
+const Dashboard = async () => {
   return (
     <main className="flex flex-col p-4 md:p-6">
       <section className="flex flex-col justify-between gap-1 py-4 px-2">
