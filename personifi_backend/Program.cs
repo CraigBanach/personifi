@@ -34,8 +34,8 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 
 builder.Services
   .AddAuthorizationBuilder()
-    .AddPolicy("read:messages", policy => policy.Requirements.Add(
-          new HasScopeRequirement("read:messages", auth0Domain)
+    .AddPolicy("read:balances", policy => policy.Requirements.Add(
+          new HasScopeRequirement("read:balances", $"https://{auth0Domain}/")
         )
 );
 
