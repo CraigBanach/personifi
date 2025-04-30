@@ -4,6 +4,7 @@ import { RecentTransactions } from "@/components/dashboard/recentTransactions";
 import { SavingsGoals } from "@/components/dashboard/savingsGoals";
 import { SpendingChart } from "@/components/dashboard/spendingChart";
 import { UpcomingBills } from "@/components/dashboard/upcomingBills";
+import { PageHeader } from "@/components/ui/pageHeader";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -13,15 +14,11 @@ export const metadata: Metadata = {
 
 const Dashboard = async () => {
   return (
-    <main className="flex flex-col p-4 md:p-6">
-      <section className="flex flex-col justify-between gap-1 py-4 px-2">
-        <h1 className="text-2xl font-bold tracking-tight md:text-3xl">
-          Dashboard
-        </h1>
-        <p className="text-muted-foreground">
-          Get an overview of your financial health
-        </p>
-      </section>
+    <>
+      <PageHeader
+        title="Dashboard"
+        subTitle="Get an overview of your financial health"
+      />
       <section className="flex flex-col gap-6">
         <OverviewCards />
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-7">
@@ -36,7 +33,7 @@ const Dashboard = async () => {
           </div>
         </div>
       </section>
-    </main>
+    </>
   );
 };
 
