@@ -1,9 +1,6 @@
 import { TransactionForm } from "@/components/transactions/new/transactionForm";
 import { PageHeader } from "@/components/ui/pageHeader";
 import type { Metadata } from "next";
-// import { DashboardHeader } from "@/components/dashboard/dashboard-header";
-// import { TransactionForm } from "@/components/transactions/transaction-form";
-// import { CategorySummary } from "@/components/transactions/category-summary";
 
 export const metadata: Metadata = {
   title: "New Transaction | Personifi",
@@ -12,19 +9,12 @@ export const metadata: Metadata = {
 
 export default function NewTransactionPage() {
   return (
-    <>
+    <div className="@container">
       <PageHeader
         title="New Transaction"
         subTitle="Record a new income or expense transaction"
       />
-      <div className="grid gap-8 md:grid-cols-3">
-        <div className="md:col-span-2">
-          <TransactionForm />
-        </div>
-        {/* <div>
-          <CategorySummary />
-        </div> */}
-      </div>
-    </>
+      <TransactionForm />
+    </div>
   );
 }
