@@ -1,6 +1,6 @@
 namespace personifi_backend.Models
 {
-  public class Transaction
+  public class transactionDto
   {
     
   }
