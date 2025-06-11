@@ -37,6 +37,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
+import { createTransaction } from "@/components/transactions/new/createTransaction";
 
 enum TransactionType {
   Expense = "Expense",
@@ -59,7 +60,10 @@ const now = new Date();
 const formSchema = z.object({
   type: z.nativeEnum(TransactionType),
   amount: z.coerce.number().nonnegative().safe(),
-  description: z.string().max(10000),
+  description: z
+    .string()
+    .min(1, { message: "Description must be provided" })
+    .max(10000, { message: "Description must be 10000 characters or less" }),
   date: z
     .date()
     .max(
@@ -68,6 +72,8 @@ const formSchema = z.object({
   category: z.custom<string>((val) => budgetCategories.includes(val)),
   notes: z.string().max(10000).optional(),
 });
+
+export type CreateTransaction = z.infer<typeof formSchema>;
 
 export const TransactionForm = () => {
   const form = useForm<z.infer<typeof formSchema>>({
@@ -82,8 +88,8 @@ export const TransactionForm = () => {
     },
   });
 
-  const onSubmit = (values: z.infer<typeof formSchema>) => {
-    console.log(values);
+  const onSubmit = async (values: CreateTransaction) => {
+    console.log(await createTransaction(values));
   };
 
   return (

@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Mvc;
+using personifi_backend.Models;
 
 namespace personifi_backend.Controllers
 {
@@ -14,12 +14,12 @@ namespace personifi_backend.Controllers
         {
             _logger = logger;
         }
-    }
 
-    [HttpPost]
+        [HttpPost]
         [Authorize("transaction:create")]
-        public Task<IActionResult<Transaction>> PostTransaction(CreateTransactionDto transactionDto)
+        public Task<IActionResult> PostTransaction(TransactionDto transactionDto)
         {
-
+            throw new NotImplementedException();
         }
     }
+}
