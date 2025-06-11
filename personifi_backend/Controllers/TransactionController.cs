@@ -17,7 +17,7 @@ namespace personifi_backend.Controllers
 
         [HttpPost]
         [Authorize("transaction:create")]
-        public Task<IActionResult> PostTransaction(TransactionDto transactionDto)
+        public Task<IActionResult> PostTransaction([FromBody] TransactionDto transactionDto)
         {
             throw new NotImplementedException();
         }

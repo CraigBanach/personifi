@@ -35,9 +35,11 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 builder.Services
   .AddAuthorizationBuilder()
     .AddPolicy("read:balances", policy => policy.Requirements.Add(
-          new HasScopeRequirement("read:balances", $"https://{auth0Domain}/")
-        )
-);
+        new HasScopeRequirement("read:balances", $"https://{auth0Domain}/")
+    ))
+    .AddPolicy("transaction:create", policy => policy.Requirements.Add(
+        new HasScopeRequirement("transaction:create", $"https://{auth0Domain}/")
+    ));
 
 builder.Services.AddSingleton<IAuthorizationHandler, HasScopeHandler>();
 
