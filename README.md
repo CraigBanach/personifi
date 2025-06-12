@@ -12,3 +12,7 @@ A comprehensive personal finance management application built with Next.js & .NE
 
 - ASP.NET Core 9 Web API
 - Entity Framework Core
+
+### Data Store
+
+- Postgres (Supabase)
