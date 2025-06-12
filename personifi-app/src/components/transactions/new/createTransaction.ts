@@ -2,7 +2,6 @@
 
 import { CreateTransaction } from "@/components/transactions/new/transactionForm";
 import { auth0 } from "@/lib/auth0";
-import { date } from "zod";
 
 export const createTransaction = async (transaction: CreateTransaction) => {
   const createTransactionDto = {
@@ -11,7 +10,7 @@ export const createTransaction = async (transaction: CreateTransaction) => {
     transactionType: transaction.type,
     description: transaction.description,
     notes: transaction.notes,
-    transactionDate: date,
+    transactionDate: transaction.date,
   };
 
   const body = JSON.stringify(createTransactionDto);
@@ -29,11 +28,7 @@ export const createTransaction = async (transaction: CreateTransaction) => {
           "Content-Type": "application/json",
         },
         method: "POST",
-        body: JSON.stringify({
-          ...transaction,
-          categoryId: 1,
-          transactionType: "Expense",
-        }),
+        body: JSON.stringify(createTransactionDto),
       }
     );
 
