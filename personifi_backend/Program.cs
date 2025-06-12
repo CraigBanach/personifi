@@ -1,7 +1,9 @@
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using personifi_backend.Classes;
+using personifi_backend.Models;
 using System.Security.Claims;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -26,6 +28,9 @@ if (string.IsNullOrEmpty(postgresPassword))
 {
     throw new InvalidOperationException("PostgresPassword configuration is missing or empty.");
 }
+
+builder.Services.AddDbContext<PersonifiContext>(options =>
+    options.UseNpgsql($"Host=localhost;Database=personifi;Username=postgres;Password={postgresPassword}"));
 
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 .AddJwtBearer(options =>

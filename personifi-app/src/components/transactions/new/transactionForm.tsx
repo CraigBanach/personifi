@@ -95,7 +95,7 @@ export const TransactionForm = () => {
     try {
       const res = await createTransaction(values);
       console.log(res);
-      setSubmitResponse(res);
+      setSubmitResponse(JSON.stringify(res));
     } catch (e) {
       console.error(e);
       setSubmitResponse((e as Error)?.message);
