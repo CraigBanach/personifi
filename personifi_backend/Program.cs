@@ -10,6 +10,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 var auth0Domain = builder.Configuration["Auth0:Domain"];
 var auth0Audience = builder.Configuration["Auth0:Audience"];
+var postgresPassword = builder.Configuration["PostgresPassword"];
 
 if (string.IsNullOrEmpty(auth0Domain))
 {
@@ -19,6 +20,11 @@ if (string.IsNullOrEmpty(auth0Domain))
 if (string.IsNullOrEmpty(auth0Audience))
 {
     throw new InvalidOperationException("Auth0:Audience configuration is missing or empty.");
+}
+
+if (string.IsNullOrEmpty(postgresPassword))
+{
+    throw new InvalidOperationException("PostgresPassword configuration is missing or empty.");
 }
 
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
