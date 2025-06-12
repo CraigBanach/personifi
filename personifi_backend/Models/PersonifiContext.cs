@@ -42,7 +42,6 @@ namespace personifi_backend.Models
                 {
                     testTransaction = new Transaction
                     {
-                        User = testUser,
                         Category = testCategory,
                         Amount = 1000.00m,
                         TransactionType = TransactionType.Expense,

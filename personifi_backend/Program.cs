@@ -5,6 +5,7 @@ using Microsoft.IdentityModel.Tokens;
 using personifi_backend.Classes;
 using personifi_backend.Models;
 using System.Security.Claims;
+using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -54,7 +55,10 @@ builder.Services
 
 builder.Services.AddSingleton<IAuthorizationHandler, HasScopeHandler>();
 
-builder.Services.AddControllers();
+builder.Services.AddControllers().AddJsonOptions(x =>
+{
+    x.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
+});
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
 

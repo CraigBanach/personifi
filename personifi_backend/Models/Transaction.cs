@@ -3,7 +3,6 @@ namespace personifi_backend.Models
     public class Transaction
     {
         public int Id { get; set; }
-        public required User User { get; set; }
         public required Category Category { get; set; }
         public decimal Amount { get; set; }
         public TransactionType TransactionType { get; set; }
