@@ -1,0 +1,24 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "personifi_backend", "personifi_backend.csproj", "{158AEC77-011C-7AF2-58A4-B70C38BFF48D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{158AEC77-011C-7AF2-58A4-B70C38BFF48D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{158AEC77-011C-7AF2-58A4-B70C38BFF48D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{158AEC77-011C-7AF2-58A4-B70C38BFF48D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{158AEC77-011C-7AF2-58A4-B70C38BFF48D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1BB9AA80-568D-49AD-A3BE-1F9DBB3B83CB}
+	EndGlobalSection
+EndGlobal
