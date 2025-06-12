@@ -3,6 +3,7 @@ import { auth0 } from "./lib/auth0";
 
 export async function middleware(request: NextRequest) {
   const authResponse = await auth0.middleware(request);
+  authResponse.headers.set("x-current-path", request.nextUrl.pathname);
 
   if (request.nextUrl.pathname.startsWith("/auth")) {
     return authResponse;
