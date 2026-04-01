@@ -1,4 +1,4 @@
-# BackendMastery
+# Personifi
 
 This is a repo where I can develop, enhance & showcase my backend engineering skills
 
